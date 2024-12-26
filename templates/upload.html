@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload News - News-Verse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #04101e;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: blur(6px);
+    }
+
+    .content {
+      text-align: center;
+      color: #ffffff;
+      background: rgba(31, 31, 31, 0.8); 
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+      width: 70%;
+      max-width: 300px;
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .content input {
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      width: 80%;
+      background: #f0ebeb;
+      color: #0e0c0c;
+    }
+
+    .content button {
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      width: 60%;
+      background: #5da4eb;
+      color: #121212;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .content button:hover {
+      background: #206ab5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fullscreen background image -->
+  <img class="background-image" src="static/getnews1.png" alt="News Background">
+
+  <!-- Central content -->
+  <div class="content">
+    <h1>Upload News Data</h1>
+    <form>
+      <input type="date" name="date" placeholder="Select Date" required>
+      <input type="file" name="file" placeholder="Choose File" required>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+</html>
